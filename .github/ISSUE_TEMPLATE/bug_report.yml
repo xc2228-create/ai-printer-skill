@@ -1,0 +1,47 @@
+name: 🐞 报告一个 Bug
+description: 打印失败、报错、结果不对
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填全，尤其是**原始报错**和 printer status 输出，
+        这两项能省掉一半的来回沟通。
+  - type: input
+    id: version
+    attributes:
+      label: printer-skill 版本
+      description: 运行 printer status，第一行就是版本
+      placeholder: print-cli 1.3.1
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows 版本 / 打印机
+      placeholder: Windows 11 23H2 / 某型号激光打印机（USB）
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: 你执行的完整命令
+      description: 不要省略参数
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: 实际输出 / 报错
+      description: 完整粘贴，包括 ERR 行和退出码
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你期望的结果
+    validations:
+      required: true

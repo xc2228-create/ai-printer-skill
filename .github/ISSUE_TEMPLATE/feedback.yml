@@ -1,0 +1,41 @@
+name: ⭐ 使用体验 / 评价
+description: 用起来怎么样？哪里好、哪里别扭
+title: "[feedback] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这个模板是给「用完之后想说两句」的人准备的，不是 bug 也可以填。
+        你的反馈会直接影响后面的优先级。
+  - type: dropdown
+    id: rating
+    attributes:
+      label: 整体满意度
+      options:
+        - 5 · 很好用，基本没折腾
+        - 4 · 好用，小地方要调
+        - 3 · 能用，但有明显不方便
+        - 2 · 比较别扭
+        - 1 · 没跑起来
+    validations:
+      required: true
+  - type: textarea
+    id: good
+    attributes:
+      label: 最满意的地方
+  - type: textarea
+    id: bad
+    attributes:
+      label: 最想改进的地方
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 你主要用它做什么
+      placeholder: 比如：让 AI 帮我打日报 / 批量打发票 / 打给孩子做练习
+  - type: checkboxes
+    id: allow_show
+    attributes:
+      label: 是否允许把这条反馈的摘要放进 README 的「用户反馈」
+      options:
+        - label: 允许（不写真实姓名）
