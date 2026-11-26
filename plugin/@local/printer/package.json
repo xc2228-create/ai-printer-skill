@@ -1,0 +1,12 @@
+{
+  "name": "@local/printer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "description": "AI printer skill host plugin: printer_list / printer_print / printer_status, wrapping print-cli.mjs."
+}

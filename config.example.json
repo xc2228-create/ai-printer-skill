@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "printers": {
+    "allow": [
+      "Microsoft Print to PDF",
+      "Your Printer Name"
+    ],
+    "default": "Microsoft Print to PDF",
+    "allowRealPrinter": true,
+    "realPrinters": [
+      "Your Printer Name"
+    ]
+  },
+  "limits": {
+    "maxCopiesWithoutForce": 5,
+    "maxCopies": 50
+  },
+  "output": {
+    "dir": "test-out"
+  },
+  "logging": {
+    "dir": "logs"
+  }
+}
